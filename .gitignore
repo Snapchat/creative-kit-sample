@@ -1,0 +1,27 @@
+.DS_Store
+
+## IntelliJ directory-based project format.
+.idea/
+**/*/.idea/
+
+## Gradle scratch directory
+**/.gradle
+.gradle
+
+## IntelliJ file-based project format.
+**/*.ipr
+**/*.iws
+**/*.iml
+
+## IntelliJ output
+out
+
+## jenv
+**/*/.java-version
+
+## Mac directory custom attributes file.
+**/*/.DS_Store
+
+## Ignore build directory
+**/build
+

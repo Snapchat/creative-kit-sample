@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    >
+    <FrameLayout
+        android:id="@+id/snap_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/select_snap"
+            />
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            />
+
+        <com.snapchat.kit.creativesample.SnapVideoView
+            android:id="@+id/video_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout style="@style/Option">
+        <TextView
+            style="@style/Option.Label"
+            android:text="Caption"
+            />
+        <EditText
+            style="@style/Option.Field"
+            android:id="@+id/caption_field"
+            android:hint="Enter a snap caption"
+            android:inputType="text"
+            />
+    </LinearLayout>
+    <LinearLayout style="@style/Option">
+        <TextView
+            style="@style/Option.Label"
+            android:text="Link"
+            />
+        <EditText
+            style="@style/Option.Field"
+            android:id="@+id/url_field"
+            android:inputType="textUri"
+            android:hint="Enter a URL"
+            />
+    </LinearLayout>
+    <LinearLayout style="@style/Option">
+        <TextView
+            style="@style/Option.Label"
+            android:text="Attach Sticker"
+            />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <Switch
+            android:id="@+id/send_sticker_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/padding"
+            />
+    </LinearLayout>
+    <FrameLayout style="@style/Option">
+        <TextView
+            style="@style/ShareButton"
+            android:id="@+id/share_button"
+            android:text="Share to Snapchat"
+            />
+    </FrameLayout>
+</LinearLayout>
