@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hIo-7K-jTt">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Creative-->
+        <scene sceneID="pMA-yo-vux">
+            <objects>
+                <navigationController title="Creative" id="hIo-7K-jTt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Creative" image="icon-creative-kit-tab" id="FfP-j9-weB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UQP-GR-091">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XgD-ZP-Clq" kind="relationship" relationship="rootViewController" id="qjY-6g-WWi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cy9-Ck-nAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="207"/>
+        </scene>
+        <!--Share-->
+        <scene sceneID="z7t-G3-PSC">
+            <objects>
+                <tableViewController id="XgD-ZP-Clq" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P6l-dX-bv4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="9fy-DR-7lm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="VUP-0d-MBr" detailTextLabel="yBr-dO-SNo" imageView="Rtz-VH-C5f" rowHeight="100" style="IBUITableViewCellStyleSubtitle" id="EsL-R5-2hD">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EsL-R5-2hD" id="GdB-nO-Sj1">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Creative Kit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VUP-0d-MBr">
+                                                    <rect key="frame" x="131" y="9" width="97" height="23.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Different ways of sharing an asset (image or video) on Snapchat." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yBr-dO-SNo">
+                                                    <rect key="frame" x="131" y="35.5" width="169.5" height="53.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="icon-creative-kit" id="Rtz-VH-C5f">
+                                                    <rect key="frame" x="16" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="SEx-d1-TLC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="EK3-zM-hto" rowHeight="32" style="IBUITableViewCellStyleDefault" id="nrp-jH-8Ua">
+                                        <rect key="frame" x="0.0" y="100" width="320" height="32"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nrp-jH-8Ua" id="OmF-2u-xxj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Share to Snapchat Preview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EK3-zM-hto">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="G8O-4E-A7i">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G8O-4E-A7i" id="E17-bU-zbW">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNU-tp-lh3">
+                                                    <rect key="frame" x="10" y="11" width="300" height="48"/>
+                                                    <color key="backgroundColor" red="0.054901960780000002" green="0.67843137249999996" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Puf-Df-rJ3"/>
+                                                        <constraint firstAttribute="height" constant="48" id="po6-K2-1mo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                    <state key="normal" title="Share from iPhone Camera">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <segue destination="ArA-jN-nOj" kind="show" id="UA8-YO-VDg"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cNU-tp-lh3" firstAttribute="centerY" secondItem="E17-bU-zbW" secondAttribute="centerY" id="2UE-I2-ucc"/>
+                                                <constraint firstItem="cNU-tp-lh3" firstAttribute="centerX" secondItem="E17-bU-zbW" secondAttribute="centerX" id="yPI-it-o9T"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="jVb-QK-uOe">
+                                        <rect key="frame" x="0.0" y="202" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jVb-QK-uOe" id="LR2-qL-pmh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGh-Zt-tDQ">
+                                                    <rect key="frame" x="10" y="11" width="300" height="48"/>
+                                                    <color key="backgroundColor" red="0.054901960780000002" green="0.67843137249999996" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="ChY-G8-VbW"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="EDP-6h-K0g"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                    <state key="normal" title="Share from the Cloud">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <segue destination="ujk-Yn-bUh" kind="presentation" id="96v-gP-NZv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jGh-Zt-tDQ" firstAttribute="centerX" secondItem="LR2-qL-pmh" secondAttribute="centerX" id="J0y-GK-Mci"/>
+                                                <constraint firstItem="jGh-Zt-tDQ" firstAttribute="centerY" secondItem="LR2-qL-pmh" secondAttribute="centerY" id="vbz-AS-mRI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="h5T-Ff-mCC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="DRb-dH-Aue" rowHeight="32" style="IBUITableViewCellStyleDefault" id="nLb-6Y-aBs">
+                                        <rect key="frame" x="0.0" y="272" width="320" height="32"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nLb-6Y-aBs" id="Ye4-rl-VyO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Share to Snapchat Camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DRb-dH-Aue">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="bfb-Oc-nxB">
+                                        <rect key="frame" x="0.0" y="304" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bfb-Oc-nxB" id="Yjc-1X-Rbw">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqo-S1-Vfp">
+                                                    <rect key="frame" x="10" y="11" width="300" height="48"/>
+                                                    <color key="backgroundColor" red="0.054901960780000002" green="0.67843137249999996" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="1F4-08-BrP"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="NNy-02-F9B"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                    <state key="normal" title="Share Sticker">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <segue destination="55A-AH-0Fw" kind="presentation" id="gRs-en-mB3"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kqo-S1-Vfp" firstAttribute="centerX" secondItem="Yjc-1X-Rbw" secondAttribute="centerX" id="XMk-Hz-CXz"/>
+                                                <constraint firstItem="Kqo-S1-Vfp" firstAttribute="centerY" secondItem="Yjc-1X-Rbw" secondAttribute="centerY" id="kp6-lJ-qO9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="XgD-ZP-Clq" id="n7B-ed-vja"/>
+                            <outlet property="delegate" destination="XgD-ZP-Clq" id="tMb-Nv-mBY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Share" id="nG9-Rd-hwk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFJ-eW-Ntq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="208"/>
+        </scene>
+        <!--Remote Images-->
+        <scene sceneID="hMf-gy-aD9">
+            <objects>
+                <viewController title="Remote Images" id="hcf-Qw-dHR" customClass="ImagesViewController" customModule="CreativeKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfN-Ke-pws">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an image from the Internet to share on Snapchat." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xva-zh-fs6">
+                                <rect key="frame" x="10" y="64" width="300" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DEd-7r-rFN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IXD-UW-glX">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v3g-8a-Xp0">
+                                    <size key="itemSize" width="96" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageGridCellIdentifer" id="9H5-a0-Hut" customClass="ImageCollectionViewCell" customModule="CreativeKitSample" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="96" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ext-nr-gcn" customClass="FLAnimatedImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Ext-nr-gcn" secondAttribute="trailing" id="6WG-e0-k4D"/>
+                                            <constraint firstItem="Ext-nr-gcn" firstAttribute="leading" secondItem="9H5-a0-Hut" secondAttribute="leading" id="CAL-w5-SVV"/>
+                                            <constraint firstItem="Ext-nr-gcn" firstAttribute="top" secondItem="9H5-a0-Hut" secondAttribute="top" id="cy9-4X-ctu"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ext-nr-gcn" secondAttribute="bottom" id="vQa-6C-dLi"/>
+                                        </constraints>
+                                        <size key="customSize" width="96" height="96"/>
+                                        <connections>
+                                            <outlet property="animView" destination="Ext-nr-gcn" id="h5Q-Ah-her"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hcf-Qw-dHR" id="2vb-uw-QZl"/>
+                                    <outlet property="delegate" destination="hcf-Qw-dHR" id="CVj-N8-jxM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xva-zh-fs6" firstAttribute="leading" secondItem="Tk0-3h-rZI" secondAttribute="leading" constant="10" id="0l0-79-Cyi"/>
+                            <constraint firstItem="Tk0-3h-rZI" firstAttribute="trailing" secondItem="xva-zh-fs6" secondAttribute="trailing" constant="10" id="8Lq-dm-tly"/>
+                            <constraint firstItem="Tk0-3h-rZI" firstAttribute="bottom" secondItem="IXD-UW-glX" secondAttribute="bottom" id="HeR-yD-WVV"/>
+                            <constraint firstItem="IXD-UW-glX" firstAttribute="leading" secondItem="Tk0-3h-rZI" secondAttribute="leading" id="I7P-De-Qg8"/>
+                            <constraint firstItem="IXD-UW-glX" firstAttribute="top" secondItem="xva-zh-fs6" secondAttribute="bottom" id="JwF-XK-xDl"/>
+                            <constraint firstItem="Tk0-3h-rZI" firstAttribute="trailing" secondItem="IXD-UW-glX" secondAttribute="trailing" id="aCd-Xu-y2G"/>
+                            <constraint firstItem="xva-zh-fs6" firstAttribute="top" secondItem="Tk0-3h-rZI" secondAttribute="top" id="xOZ-Lc-jC0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tk0-3h-rZI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CsQ-vx-Bs2">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Szt-R6-eZn">
+                            <connections>
+                                <action selector="cancelDidTap" destination="hcf-Qw-dHR" id="f8w-ET-Wpj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Share" id="yFH-lm-wRe">
+                            <connections>
+                                <action selector="shareDidTap" destination="hcf-Qw-dHR" id="zZe-Du-rcd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="IXD-UW-glX" id="QKO-0L-J1W"/>
+                        <outlet property="shareButton" destination="yFH-lm-wRe" id="scX-xR-UM4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMf-Xr-hnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3911" y="208"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="buW-aF-Dfg">
+            <objects>
+                <navigationController id="ujk-Yn-bUh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="klN-al-vR9">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Y5-2d-rOe" kind="relationship" relationship="rootViewController" id="Aa0-Gx-WdB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Y9-be-PsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="206"/>
+        </scene>
+        <!--Choose-->
+        <scene sceneID="fL8-M9-9kX">
+            <objects>
+                <tableViewController title="Choose" id="ArA-jN-nOj" customClass="MediaPickerViewController" customModule="CreativeKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N3n-wT-pbV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="KLX-cd-t5i">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="dR7-3Y-8RM">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dR7-3Y-8RM" id="uFy-TQ-Wjd">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwf-m5-zCC">
+                                                    <rect key="frame" x="10" y="11" width="300" height="48"/>
+                                                    <color key="backgroundColor" red="0.054901960780000002" green="0.67843137249999996" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="djJ-jK-ksk"/>
+                                                        <constraint firstAttribute="height" constant="48" id="rXp-sa-IMX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                    <state key="normal" title="Camera">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="cameraButtonDidTap:" destination="ArA-jN-nOj" eventType="touchUpInside" id="Fcp-8D-33f"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bwf-m5-zCC" firstAttribute="centerX" secondItem="uFy-TQ-Wjd" secondAttribute="centerX" id="4Jt-YH-S8b"/>
+                                                <constraint firstItem="bwf-m5-zCC" firstAttribute="centerY" secondItem="uFy-TQ-Wjd" secondAttribute="centerY" id="Ihz-sj-AB0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="UMo-C8-z55">
+                                        <rect key="frame" x="0.0" y="70" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UMo-C8-z55" id="8lb-S2-ylk">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeV-YO-dDR">
+                                                    <rect key="frame" x="10" y="11" width="300" height="48"/>
+                                                    <color key="backgroundColor" red="0.054901960780000002" green="0.67843137249999996" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="MUH-5J-Bcd"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="yXj-kR-Pxx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                    <state key="normal" title="Photo Library">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="photoLibraryButtonDidTap:" destination="ArA-jN-nOj" eventType="touchUpInside" id="xup-lI-EvF"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CeV-YO-dDR" firstAttribute="centerX" secondItem="8lb-S2-ylk" secondAttribute="centerX" id="7kp-KX-hLN"/>
+                                                <constraint firstItem="CeV-YO-dDR" firstAttribute="centerY" secondItem="8lb-S2-ylk" secondAttribute="centerY" id="zUi-Ff-dc4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ArA-jN-nOj" id="zWM-1m-VSh"/>
+                            <outlet property="delegate" destination="ArA-jN-nOj" id="ExS-bd-Ctp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q9K-Hk-kcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2111" y="-483"/>
+        </scene>
+        <!--Caption-->
+        <scene sceneID="ecS-Ak-cLo">
+            <objects>
+                <viewController title="Caption" id="UW0-Qx-HWH" customClass="CaptionViewController" customModule="CreativeKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DlA-P7-fZy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter caption here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFW-Ws-JtA">
+                                <rect key="frame" x="16" y="80" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LOV-LK-uCD" firstAttribute="trailing" secondItem="cFW-Ws-JtA" secondAttribute="trailing" constant="16" id="HJ7-f0-Rav"/>
+                            <constraint firstItem="cFW-Ws-JtA" firstAttribute="top" secondItem="LOV-LK-uCD" secondAttribute="top" constant="16" id="sX5-me-vD9"/>
+                            <constraint firstItem="cFW-Ws-JtA" firstAttribute="leading" secondItem="LOV-LK-uCD" secondAttribute="leading" constant="16" id="va0-vU-mhA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LOV-LK-uCD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rco-RI-3LJ">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="N1b-ue-Ofh">
+                            <connections>
+                                <action selector="cancelDidTap" destination="UW0-Qx-HWH" id="24o-hb-IQh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Skip" id="279-j9-reU">
+                            <connections>
+                                <segue destination="JNc-Jx-cHz" kind="show" identifier="showStickers" id="73S-k4-LST"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="cFW-Ws-JtA" id="6pJ-Ig-zl0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vok-ow-nhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3002" y="930"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BME-0f-vNs">
+            <objects>
+                <navigationController id="55A-AH-0Fw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gN5-wH-z8i">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UW0-Qx-HWH" kind="relationship" relationship="rootViewController" id="yii-Y9-CuV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irJ-By-ozn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2109" y="930"/>
+        </scene>
+        <!--Stickers-->
+        <scene sceneID="Mlp-O8-BRL">
+            <objects>
+                <viewController title="Stickers" id="JNc-Jx-cHz" customClass="StickersViewController" customModule="CreativeKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0nH-AX-yel">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a sticker. Once you are on Snapchat, snap a photo as a background for the shared sticker." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9Y-Wv-Bgf">
+                                <rect key="frame" x="10" y="64" width="300" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Bk2-gw-EkI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="17T-hI-van">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="f79-e1-U0R">
+                                    <size key="itemSize" width="80" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="12" minY="12" maxX="12" maxY="12"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StickerGridCellIdentifer" id="N5N-51-ufQ" customClass="ImageCollectionViewCell" customModule="CreativeKitSample" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="12" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GId-PX-t7Y" customClass="FLAnimatedImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="GId-PX-t7Y" secondAttribute="trailing" id="8nW-fg-5Nv"/>
+                                            <constraint firstItem="GId-PX-t7Y" firstAttribute="leading" secondItem="N5N-51-ufQ" secondAttribute="leading" id="Y5c-9Z-ShH"/>
+                                            <constraint firstAttribute="bottom" secondItem="GId-PX-t7Y" secondAttribute="bottom" id="glr-ny-Ghh"/>
+                                            <constraint firstItem="GId-PX-t7Y" firstAttribute="top" secondItem="N5N-51-ufQ" secondAttribute="top" id="yTE-PS-i23"/>
+                                        </constraints>
+                                        <size key="customSize" width="80" height="80"/>
+                                        <connections>
+                                            <outlet property="animView" destination="GId-PX-t7Y" id="tXa-Ke-hP7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="JNc-Jx-cHz" id="sHP-Ty-8q6"/>
+                                    <outlet property="delegate" destination="JNc-Jx-cHz" id="GmR-lK-m0V"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="17T-hI-van" firstAttribute="top" secondItem="f9Y-Wv-Bgf" secondAttribute="bottom" id="0Y7-Mq-FBk"/>
+                            <constraint firstItem="eRX-FN-XGw" firstAttribute="trailing" secondItem="f9Y-Wv-Bgf" secondAttribute="trailing" constant="10" id="IAB-yE-FSj"/>
+                            <constraint firstItem="eRX-FN-XGw" firstAttribute="trailing" secondItem="17T-hI-van" secondAttribute="trailing" id="VIh-ti-nDR"/>
+                            <constraint firstItem="17T-hI-van" firstAttribute="leading" secondItem="eRX-FN-XGw" secondAttribute="leading" id="Y91-ao-iqd"/>
+                            <constraint firstItem="f9Y-Wv-Bgf" firstAttribute="leading" secondItem="eRX-FN-XGw" secondAttribute="leading" constant="10" id="oHY-b7-Fpk"/>
+                            <constraint firstItem="f9Y-Wv-Bgf" firstAttribute="top" secondItem="eRX-FN-XGw" secondAttribute="top" id="sa9-Yr-Bie"/>
+                            <constraint firstItem="eRX-FN-XGw" firstAttribute="bottom" secondItem="17T-hI-van" secondAttribute="bottom" id="xGK-Uv-wsj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eRX-FN-XGw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nsp-xc-UhP">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fvq-rI-GPj">
+                            <connections>
+                                <action selector="cancelDidTap" destination="JNc-Jx-cHz" id="Ouo-tX-Lqq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Share" id="QwV-Ey-WOc">
+                            <connections>
+                                <action selector="shareDidTap" destination="JNc-Jx-cHz" id="SkS-Dg-VYS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="17T-hI-van" id="H9F-hL-lJL"/>
+                        <outlet property="shareButton" destination="QwV-Ey-WOc" id="R8s-de-2gv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KLN-0F-lVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3913" y="930"/>
+        </scene>
+        <!--Caption-->
+        <scene sceneID="mcf-Ne-6vB">
+            <objects>
+                <viewController title="Caption" id="4Y5-2d-rOe" customClass="CaptionViewController" customModule="CreativeKitSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EgT-LT-9mJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter caption here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0K-MV-Py2">
+                                <rect key="frame" x="16" y="80" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C0K-MV-Py2" firstAttribute="leading" secondItem="87N-tY-Rnl" secondAttribute="leading" constant="16" id="fGn-BH-7ss"/>
+                            <constraint firstItem="87N-tY-Rnl" firstAttribute="trailing" secondItem="C0K-MV-Py2" secondAttribute="trailing" constant="16" id="gH2-PA-czq"/>
+                            <constraint firstItem="C0K-MV-Py2" firstAttribute="top" secondItem="87N-tY-Rnl" secondAttribute="top" constant="16" id="iNT-e6-hBX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="87N-tY-Rnl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tan-UE-fDb">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="NCM-7c-iqO">
+                            <connections>
+                                <action selector="cancelDidTap" destination="4Y5-2d-rOe" id="ocz-Nd-vhk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Skip" id="lgv-Kq-YpW">
+                            <connections>
+                                <segue destination="hcf-Qw-dHR" kind="show" identifier="showImages" id="bQr-o9-iDc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="C0K-MV-Py2" id="zIN-mE-otT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5H2-nw-RfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3002" y="206"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-creative-kit" width="120" height="120"/>
+        <image name="icon-creative-kit-tab" width="31" height="31"/>
+    </resources>
+</document>
