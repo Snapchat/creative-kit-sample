@@ -41,6 +41,7 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Enum for test app states
     public enum SnapState {
         NO_SNAP("Clear Snap"),
         IMAGE("Select Image"),
