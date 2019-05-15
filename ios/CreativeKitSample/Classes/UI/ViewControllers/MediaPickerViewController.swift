@@ -19,8 +19,8 @@ class MediaPickerViewController: UITableViewController {
     let snapContent = SCSDKVideoSnapContent(snapVideo: snapVideo)
     
     // Send it over to Snapchat
-    let snapAPI = SCSDKSnapAPI(content: snapContent)
-    snapAPI.startSnapping { (error: Error?) in
+    let snapAPI = SCSDKSnapAPI()
+    snapAPI.startSending(snapContent) { (error: Error?) in
       print("Sharing a video on SnapChat.")
     }
   }
@@ -30,8 +30,8 @@ class MediaPickerViewController: UITableViewController {
     let snapContent = SCSDKPhotoSnapContent(snapPhoto: snapPhoto)
     
     // Send it over to Snapchat
-    let snapAPI = SCSDKSnapAPI(content: snapContent)
-    snapAPI.startSnapping { (error: Error?) in
+    let snapAPI = SCSDKSnapAPI()
+    snapAPI.startSending(snapContent) { (error: Error?) in
       print("Sharing a photo on SnapChat.")
     }
   }
