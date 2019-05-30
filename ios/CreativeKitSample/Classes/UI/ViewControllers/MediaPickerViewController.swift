@@ -12,62 +12,61 @@ import UIKit
 import SCSDKCreativeKit
 
 class MediaPickerViewController: UITableViewController {
-  // MARK: - Helpers
-  
-  func shareVideo(mediaURL: URL) {
-    let snapVideo = SCSDKSnapVideo(videoUrl: mediaURL)
-    let snapContent = SCSDKVideoSnapContent(snapVideo: snapVideo)
+    // MARK: - Properties
     
-    // Send it over to Snapchat
-    let snapAPI = SCSDKSnapAPI()
-    snapAPI.startSending(snapContent) { (error: Error?) in
-      print("Sharing a video on SnapChat.")
-    }
-  }
-  
-  func shareImage(image: UIImage) {
-    let snapPhoto = SCSDKSnapPhoto(image: image)
-    let snapContent = SCSDKPhotoSnapContent(snapPhoto: snapPhoto)
-    
-    // Send it over to Snapchat
-    let snapAPI = SCSDKSnapAPI()
-    snapAPI.startSending(snapContent) { (error: Error?) in
-      print("Sharing a photo on SnapChat.")
-    }
-  }
-  
-  // MARK: - Event handlers
-  
-  @IBAction func cameraButtonDidTap(_ sender: Any) {
-    if UIImagePickerController.isSourceTypeAvailable(.camera) {
-      let pickerController = UIImagePickerController()
-      pickerController.mediaTypes = UIImagePickerController.availableMediaTypes(for: .camera)!
-      pickerController.delegate = self
-      pickerController.sourceType = .camera
-      present(pickerController, animated: true, completion: nil)
-    }
-  }
-  
-  @IBAction func photoLibraryButtonDidTap(_ sender: Any) {
-    if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-      let pickerController = UIImagePickerController()
-      pickerController.delegate = self
-      pickerController.sourceType = .photoLibrary
-      present(pickerController, animated: true, completion: nil)
-    }
-  }
-  
-  // MARK: - UIViewController
-  
-  override func viewDidLoad() {
-      super.viewDidLoad()
-
-  }
+    fileprivate lazy var snapAPI = {
+        return SCSDKSnapAPI()
+    }()
 }
+
+// MARK: Private helpers
+
+extension MediaPickerViewController {
+    fileprivate func shareVideo(mediaURL: URL) {
+        let snapVideo = SCSDKSnapVideo(videoUrl: mediaURL)
+        let snapContent = SCSDKVideoSnapContent(snapVideo: snapVideo)
+        
+        // Send it over to Snapchat
+        snapAPI.startSending(snapContent)
+    }
+    
+    fileprivate func shareImage(image: UIImage) {
+        let snapPhoto = SCSDKSnapPhoto(image: image)
+        let snapContent = SCSDKPhotoSnapContent(snapPhoto: snapPhoto)
+        
+        // Send it over to Snapchat
+        snapAPI.startSending(snapContent)
+    }
+}
+
+// MARK: Action handlers
+
+extension MediaPickerViewController {
+    @IBAction fileprivate func cameraButtonDidTap(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let pickerController = UIImagePickerController()
+            pickerController.mediaTypes = UIImagePickerController.availableMediaTypes(for: .camera)!
+            pickerController.delegate = self
+            pickerController.sourceType = .camera
+            present(pickerController, animated: true)
+        }
+    }
+    
+    @IBAction fileprivate func photoLibraryButtonDidTap(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let pickerController = UIImagePickerController()
+            pickerController.delegate = self
+            pickerController.sourceType = .photoLibrary
+            present(pickerController, animated: true)
+        }
+    }
+}
+
+// MARK: - UIImagePickerControllerDelegate
 
 extension MediaPickerViewController: UIImagePickerControllerDelegate {
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-    dismiss(animated: true, completion: nil)
+    dismiss(animated: true)
   }
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

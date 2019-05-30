@@ -7,19 +7,19 @@
 //
 
 enum MediaSource {
-  case bundle
-  case remote
+    case bundle
+    case remote
 }
 
 enum MediaType {
-  case still
-  case animated
-  case video
+    case still
+    case animated
+    case video
 }
 
 // Structure to represent the media on the Stickers controller
 struct Media {
-  var name: String
-  var source: MediaSource
-  var type: MediaType
+    var name: String
+    var source: MediaSource
+    var type: MediaType
 }
