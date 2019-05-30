@@ -9,15 +9,15 @@
 import UIKit
 
 extension String {
-  static let empty = ""
-  
-  // Returns the file name without the file extension.
-  public var fileName: String {
-    return URL(fileURLWithPath: self).deletingPathExtension().lastPathComponent
-  }
-  
-  // Returns the file extension.
-  public var fileExtension: String {
-    return URL(fileURLWithPath: self).pathExtension
-  }
+    static let Empty = ""
+    
+    // Returns the file name without the file extension
+    public var fileName: String {
+        return URL(fileURLWithPath: self).deletingPathExtension().lastPathComponent
+    }
+    
+    // Returns the file extension
+    public var fileExtension: String {
+        return URL(fileURLWithPath: self).pathExtension
+    }
 }
