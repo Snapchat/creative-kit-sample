@@ -88,8 +88,8 @@ class ImagesViewController: UIViewController {
     snapContent.caption = caption
     
     // Send it over to Snapchat
-    let snapAPI = SCSDKSnapAPI(content: snapContent)
-    snapAPI.startSnapping { (error: Error?) in
+    let snapAPI = SCSDKSnapAPI()
+    snapAPI.startSending(snapContent) { (error: Error?) in
       print("Sharing \(String(describing: url.absoluteString)) on SnapChat.")
     }
   }
