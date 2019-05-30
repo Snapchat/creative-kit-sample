@@ -95,6 +95,10 @@ extension ImagesViewController {
         snapContent.caption = caption
         
         // Send it over to Snapchat
+        
+        // NOTE: startSending() makes use of the global UIPasteboard. Calling the method without synchronization
+        //       might cause the UIPasteboard data to be overwritten, while the pasteboard is being read from Snapchat.
+        //       Either synchronize the method call yourself or disable user interaction until the share is over.
         view.isUserInteractionEnabled = false
         snapAPI.startSending(snapContent) { [weak self] (error: Error?) in
             self?.view.isUserInteractionEnabled = true
