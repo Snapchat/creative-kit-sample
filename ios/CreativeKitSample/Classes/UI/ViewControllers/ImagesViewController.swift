@@ -22,11 +22,11 @@ class ImagesViewController: UIViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView?
     @IBOutlet fileprivate weak var shareButton: UIBarButtonItem?
 
-    internal     var caption: String?
-    fileprivate  var isSharing = false
-    fileprivate  var indices: [Int]?
-    fileprivate  var selectedIndex: IndexPath?
-    fileprivate  lazy var snapAPI = {
+    internal var caption: String?
+    fileprivate var isSharing = false
+    fileprivate var indices: [Int]?
+    fileprivate var selectedIndex: IndexPath?
+    fileprivate lazy var snapAPI = {
         return SCSDKSnapAPI()
     }()
 }

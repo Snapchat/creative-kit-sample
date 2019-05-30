@@ -21,7 +21,7 @@ class StickersViewController: UIViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView?
     @IBOutlet fileprivate weak var shareButton: UIBarButtonItem?
     
-    internal    var caption: String?
+    internal var caption: String?
     fileprivate var isSharing = false
     fileprivate var selectedIndex: IndexPath?
     fileprivate let stickers = [
@@ -30,7 +30,7 @@ class StickersViewController: UIViewController {
         Media(name: "https://raw.githubusercontent.com/Snapchat/creative-kit-sample/master/ios/images/rainbow-spinner.gif", source: .remote, type: .animated),
         Media(name: "https://raw.githubusercontent.com/Snapchat/creative-kit-sample/master/ios/images/oscillating-green-ball.gif", source: .remote, type: .animated),
     ]
-    fileprivate  lazy var snapAPI = {
+    fileprivate lazy var snapAPI = {
         return SCSDKSnapAPI()
     }()
 }
