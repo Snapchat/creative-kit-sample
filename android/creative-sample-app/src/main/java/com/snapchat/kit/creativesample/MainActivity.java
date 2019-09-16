@@ -208,7 +208,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void selectMediaFromGallery(String mimeType, int resultCode) {
         Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, mimeType);
+        if(mimeType=="video/*"){
+            intent.setDataAndType(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, mimeType);
+        }
+        else{
+            intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, mimeType);
+        }
 
         startActivityForResult(intent, resultCode);
     }
