@@ -2,7 +2,7 @@ platform :ios, '12.0'
 use_frameworks!
 
 target 'CreativeKitSample' do
-  pod 'SnapSDK', :subspecs => ['SCSDKCreativeKit']
+  pod 'SnapSDK', '> 1.4', :subspecs => ['SCSDKCreativeKit']
   pod 'FLAnimatedImage'
 end
 
