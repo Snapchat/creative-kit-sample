@@ -22,25 +22,25 @@ With the *Production* `clientID`, your app can post the content from any Snapcha
   $ bundle install
   ```
 
-1. Install Snap Kit SDK via [Cocoapods](https://cocoapods.org/).
+2. Install Snap Kit SDK via [Cocoapods](https://cocoapods.org/).
 
   ```bash
   $ pod install
   ```
 
-1. Open the project in Xcode.
+3. Open the project in Xcode.
 
   ```bash
   $ open CreativeKitSample.xcworkspace
   ```
 
-1. Open Info.plist and modify the following attributes:
+4. Open Info.plist and modify the following attributes:
 
    * `SCSDKClientId` - OAuth2 client ID you receive from registering your app
    * `LSApplicationQueriesSchemes` - Always set the value to `snapchat`
 
-1. Save your project.
-1. Build and run the app on an iPhone.
+5. Save your project.
+6. Build and run the app on an iPhone.
 
 ## License
 
