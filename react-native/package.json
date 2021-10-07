@@ -14,7 +14,7 @@
     "@react-navigation/native": "^6.0.4",
     "@snapchat/snap-kit-react-native": "^0.2.0",
     "react": "16.13.1",
-    "react-native": "0.63.4",
+    "react-native": "0.64.1",
     "react-native-image-base64": "^0.1.4",
     "react-native-image-picker": "^4.1.1",
     "react-native-safe-area-context": "^3.3.2",
