@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>ReactNativeCreativeKitDemo</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+
+   <!-- ************* Snap Kit Configuration - Start ************* -->
+
+    <!-- TODO(1): Declare the Snapchat package query -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>snapchat</string>
+		<string>bitmoji-sdk</string>
+		<string>itms-apps</string>
+	</array>
+
+	<!-- TODO(2): Paste the OAuth2 Client ID for your specific app -->
+	
+	<!--
+		To ensure that this test app works, make sure that in the Snap Kit Developer Portal:
+	
+		1. You set your app's Android App ID under "Platform Identifiers" section
+		2. Your Snapchat username is in the list of "Demo Users" (only required if testing on Staging)
+	
+		Then you should paste your Staging/Production OAuth2 Client ID here.
+	-->
+	
+	<!--
+		You can use the Staging Client ID anytime even before an app is reviewed and approved
+		however, only accounts listed under the "Demo Users" on the Snap Kit developer portal
+		will be able to use your application.
+	-->
+	
+	<!--
+		With the Production Client ID, your app can post the content from any Snapchat account
+		however, your app must be approved for the Production Client ID to work.
+	-->
+	<key>SCSDKClientId</key>
+	<string>OAUTH2_CLIENT_ID_FROM_PORTAL</string>
+	
+	<!-- TODO(3): The URL Snapchat will redirect to if there’s an error -->
+	
+	<!--
+		To ensure that this test app works, make sure that in the Snap Kit Developer Portal:
+		1.   You add this url in the "Redirect URIs for OAuth" section
+	-->
+	
+	<!--
+		The redirect URL itself doesn't need to have any meaning associated with it and in
+		general, the only real criteria would be to pick a URL with a scheme that is unlikely
+		to collide with a scheme of another app.
+	
+		The URL should however follow the syntax "foo://bar".
+		If you need ideas, you could try "myapp://snap-kit/oauth2".
+	-->
+	<key>SCSDKRedirectUrl</key>
+	<string>snapkitexample://main/auth</string>
+
+	<!-- TODO(4): Update the URL Types -->
+    <key>CFBundleURLTypes</key>
+	<array>
+       <dict>
+        	<key>CFBundleTypeRole</key>
+           	<string>Editor</string>
+
+		   	<key>CFBundleURLName</key>
+           	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+		   
+			<!--
+               	Enter your redirect scheme below.
+               	For e.g. if your redirect url is "myapp://snap-kit/oauth2"
+				then the scheme is "myapp".
+           -->
+           <key>CFBundleURLSchemes</key>
+           <array>
+               <string>snapkitexample</string>
+           </array>
+       </dict>
+   </array>
+
+    <!-- TODO(5): Capture photos for SnapChat (https://github.com/react-native-image-picker/react-native-image-picker) -->
+	<key>NSCameraUsageDescription</key>
+	<string>Capture photos for SnapChat</string>
+
+    <!-- TODO(6): Capture videos for SnapChat (https://github.com/react-native-image-picker/react-native-image-picker) -->
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Capture videos for SnapChat</string>
+
+    <!-- ************* Snap Kit Configuration - End ************* -->	
+	
+</dict>
+</plist>

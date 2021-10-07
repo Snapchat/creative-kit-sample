@@ -1,0 +1,41 @@
+{
+  "name": "reactnativecreativekitdemo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.0.7",
+    "@react-navigation/native": "^6.0.4",
+    "@snapchat/snap-kit-react-native": "^0.2.0",
+    "react": "16.13.1",
+    "react-native": "0.63.4",
+    "react-native-image-base64": "^0.1.4",
+    "react-native-image-picker": "^4.1.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "rn-fetch-blob": "^0.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.27",
+    "@types/react-native": "^0.65.5",
+    "@types/react-test-renderer": "^17.0.1",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1",
+    "typescript": "^4.4.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
