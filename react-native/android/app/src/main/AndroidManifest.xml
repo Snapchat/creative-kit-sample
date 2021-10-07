@@ -3,6 +3,16 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- TODO(5): Declare the Snapchat package query (required only if your app targets Android 11 or higher) -->
+    <!--
+            Note that this require upgrade to `com.android.tools.build:gradle` version
+            otherwise it reports error with package query tag
+            (see https://stackoverflow.com/a/62969918)
+    -->
+    <queries>
+        <package android:name="com.snapchat.android" />
+    </queries>
+
     <application
       android:name=".MainApplication"
       android:label="@string/app_name"
@@ -10,6 +20,45 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
+
+      <!-- TODO(6): Paste the OAuth2 Client ID for your specific app -->
+
+      <!--
+        To ensure that this test app works, make sure that in the Snap Kit Developer Portal:
+
+        1. You set your app's Android App ID under "Platform Identifiers" section
+        2. Your Snapchat username is in the list of "Demo Users" (only required if testing on the Staging)
+
+        Then you should paste your Staging/Production OAuth2 Client ID here.
+      -->
+
+      <!--
+        You can use the Staging Client ID anytime even before an app is reviewed and approved
+        however, only accounts listed under the "Demo Users" on the Snap Kit developer portal
+        will be able to use your application.
+      -->
+
+      <!--
+        With the Production Client ID, your app can post the content from any Snapchat account
+        however, your app must be approved for the Production Client ID to work.
+      -->
+      <meta-data
+        android:name="com.snapchat.kit.sdk.clientId"
+        android:value="OAUTH2_CLIENT_ID_FROM_PORTAL" />
+
+      <!-- TODO(7): Required for sharing media or sticker content to Snapchat -->
+      <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.fileprovider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+
+        <!-- Add paths in android/app/src/main/res/xml/file_paths.xml -->
+        <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/file_paths" />
+      </provider>
+
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
@@ -21,7 +70,9 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
     </application>
 
 </manifest>

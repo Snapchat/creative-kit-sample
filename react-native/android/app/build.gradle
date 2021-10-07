@@ -129,6 +129,7 @@ android {
     }
 
     defaultConfig {
+        // TODO(4): Android Platform Identifier that you need to update on the Snap Kit Developer Portal
         applicationId "com.reactnativecreativekitdemo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion

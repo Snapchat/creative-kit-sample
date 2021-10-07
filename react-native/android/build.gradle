@@ -3,7 +3,8 @@
 buildscript {
     ext {
         buildToolsVersion = "29.0.2"
-        minSdkVersion = 16
+        // TODO(1): Upgrade to minSdkVersion >= 19
+        minSdkVersion = 21
         compileSdkVersion = 29
         targetSdkVersion = 29
     }
@@ -12,7 +13,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:3.5.3")
+        // TODO(2): Upgrade to use Query tag in AndroidManifest (refer https://stackoverflow.com/a/62969918)
+        classpath("com.android.tools.build:gradle:4.0.1")
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -28,6 +30,10 @@ allprojects {
         maven {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
+        }
+        // TODO(3): Add the maven repo for Snap Kit
+        maven {
+            url "https://storage.googleapis.com/snap-kit-build/maven"
         }
 
         google()
