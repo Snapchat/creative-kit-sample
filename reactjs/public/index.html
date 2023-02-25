@@ -1,0 +1,32 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:site_name" content="Snapchat Creative Kit Demo" />
+    <meta property="og:title" content="A creative kit demo project in react" />
+    <meta name="description" content="Snapchat Creative Kit Demo" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Snapchat Creative Kit Example</title>
+    <script>
+      (function (d, s, id) {
+        var js,
+          sjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://sdk.snapkit.com/js/v1/create.js";
+        sjs.parentNode.insertBefore(js, sjs);
+      })(document, "script", "snapkit-creative-kit-sdk");
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+`
