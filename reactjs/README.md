@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+<!-- @format -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Creative Kit x React Native
 
-## Available Scripts
+Creative Kit sample code for React Native.
 
-In the project directory, you can run:
+## Prerequisite
 
-### `npm start`
+There is no special setup required to use Creative Kit Web (other than including the share button on your site).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## App Registration
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Go to the [Snap Kit developer portal](https://kit.snapchat.com/portal/) > Sign-in with your Snapchat Account > Either create a new App by clicking on **New Project** Or Open an already existing app.
+<p>
 
-### `npm test`
+2. After the app is registered, click **Setup** and you should see two OAuth Client IDs:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   | OAuth Client ID | Usage                                                                                                                                                                             |
+   | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Production      | This lets your app post content from any Snapchat account but your app [must be approved](https://docs.snapchat.com/docs/review-guidelines) for the Production Client ID to work. |
+   | Staging         | This lets your app post content even before an app is reviewed and approved but only Snapchat accounts listed under the `Demo Users` will be able to use your application.        |
 
-### `npm run build`
+## Running the Sample App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the Sample App repository on your local machine
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```shell
+   # Clone the repo
+   $ git clone https://github.com/Snapchat/creative-kit-sample.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   # CD into the React root directory
+   $ cd creative-kit-sample/reactjs/
+   ```
 
-### `npm run eject`
+   **Note:** You should now be inside the **react-native root directory**: `/Users/.../creative-kit-sample/react-native/`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Run the `ReactCreativeKitDemo` app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```shell
+   # Running on localhost
+   $ yarn dev
+   ```
