@@ -21,7 +21,7 @@
              2. your Snapchat username is in the list of demo users
 
             Then you should paste your DEVELOPMENT OAuth2 Client ID here
-         -->
+         -->794e9882-1524-4993-8ddb-3bf9bdb463d2
         <meta-data android:name="com.snapchat.kit.sdk.clientId" android:value="" />
 
         <activity android:name=".MainActivity">
