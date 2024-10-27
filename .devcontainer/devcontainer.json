@@ -1,0 +1,240 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+}In this section we will go through using different APIs for different scenarios.
+
+The Public Profile Entity
+
+Field	Description	Is Public	Possible Values	
+id	UUID of the profile	Y		
+organization_id	UUID of the organization the profile belongs to			
+display_name	Profile display name	Y		
+description	Optional. Description of the profile	Y		
+category	Optional. Category of the profile	Y	Null, CATEGORY_V3_UNKNOWN, CATEGORY_V3_BUSINESS_GROUP, CATEGORY_V3_PEOPLE, CATEGORY_V3_PRODUCT_BRAND	
+subcategory	Optional. Sub category of the profile	Y		
+email	Optional. Email for the profile	Y		
+phone_number	Optional. Phone number for the profile			
+website	Optional. Website url for the profile	Y		
+logo_urls	Optional. Object that contains the profile logo image urls	Y	Refer to the logo_urls table below	
+address_line_1	Optional. address for the profile	Y		
+address_line_2	Optional. address for the profile			
+address_line_3	Optional. address for the profile			
+locality	Optional. Locality (city) for the profile	Y		
+administrative_district_level_1	Optional. State for the profile	Y		
+administrative_district_level_2	Optional. State for the profile			
+postal_code	Optional. Zipcode for the profile	Y		
+country	Optional. Country for the profile	Y		
+snap_user_name	Snap-user-name this profile is hosted on	Y		
+store_id	Optional. Store id if the profile is linked to a store			
+profile_type	Profile type		STORY_STUDIO_PUBLISHER, PUBLISHER_WITH_HOST_USER, PUBLIC_PROFILE, PUBLIC_PROFILE_WITH_PUBLISHER_CONTENT	
+profile_tier	Profile tier	Y	TIER_UNKNOWN, TIER_STANDARD, TIER_PUBLIC, TIER_PUBLIC_OFFICIAL	
+profile_icon_primary_color_hex	Read-only; If a Profile Icon has been uploaded this hex value represents the most prominent color in the Profile Icon	Y	Hex color value	
+internal_profile_category	Internal profile category	Y	UNKNOWN, BUSINESS, PERSON, PUBLISHER	
+subscriber_count	Optional. The number of subscribers that the profile has.	Y		
+share_authorized_data_with_api_partners	Indicates if authorized profile data is shared with API partners. See Authorized Data Sharing	Y	true, false	
+Logo URLS
+
+Field	Description	Possible Values				
+original_logo_url	Url string for original logo image, which is 1280px wide					
+discover_feed_logo_url	Url string for logo image, which is 72px wide					
+mega_profile_logo_url	Url string for logo image, which is 90px wide					
+manage_profile_logo_url	Url string for logo image, which is 640px wide					
+Note
+
+Snap public profile APIs are read only.
+
+Retrieving Profile information
+
+Get Profiles by Organization ID
+
+Profile information can be retrieved in batch using Organization ID
+
+HTTP Request
+
+GET https://businessapi.snapchat.com/public/v1/organizations/{organization_id}/public_profiles
+
+Parameters
+
+Parameter	Required	Description	Possible Values			
+organization_id	R	the organization id in the url path	UUID			
+limit	O	Pagination limit size of returned profiles. If not specified, default is 10	Integers that is bigger than 0			
+cursor	O	Pagination encoded cursor for next page profiles. Default is empty				
+HTTP Response
+
+Field	Description	Possible Values	Possible Values			
+request_id	UUID of the request	UUID	UUID			
+request_status	String to indicate the request status	SUCCESS ERROR PARTIAL	Integers that is bigger than 0			
+public_profiles	List of sub responses which contains profiles	Refer to the public_profiles table below				
+paging	Next page information if exists	Refer to the paging table below				
+debug_message	Debug information string if request_status is ERROR or Partial					
+display_message	Display information string if request_status is ERROR or Partial					
+error_code	Error code string if request_status is ERROR or Partial					
+Paging
+
+Field	Description	Possible Values				
+next_page_id	Encoded string for next page cursor					
+next_link	Encoded url string with original base url and limit and cursor					
+Public Profiles
+
+Field	Description	Possible Values				
+sub_request_status	String to indicate the request status	SUCCESS ERROR PARTIAL				
+public_profile	Profile metadata object	Refer to the public_profile entity table				
+sub_request_error_reason	Error reason string if sub_request_status is ERROR or Partial					
+Example
+
+curl
+    "https://businessapi.snapchat.com/v1/organizations/40d6719b-da09-410b-9185-0cc9c0dfed1d/public_profiles?limit=10&cursor=xxxx"
+    -H "Authorization: <ACCESS_TOKEN>"
+
+
+
+Reponse
+
+{
+  "request_id": "ce0066a8-cdaa-4c1f-9537-4d85e0d5357f",
+  "request_status": "SUCCESS",
+  "public_profiles": [
+    {
+      "sub_request_status": "SUCCESS",
+      "public_profile": {
+        "id": "36b8655e-2523-410f-ab00-02061267c3b6",
+        "organization_id": "40d6719b-da09-410b-9185-0cc9c0dfed1d",
+        "display_name": "ARBIZ Test",
+        "description": "ARBIZ, we've got the meats!",
+        "logo_urls": {
+          "original_logo_url": "https://cf-st.sc-cdn.net/d/FnezixeVnJNHDAR2ZycK1?bo=Eg0aABoAMgEESAJQGWAB&uc=25",
+          "discover_feed_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvRm5leml4ZVZuSk5IREFSMlp5Y0sxP2JvPUVnMGFBQm9BTWdFRVNBSlFHV0FCJnVjPTI1._RS0,72_FMjpeg",
+          "mega_profile_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvRm5leml4ZVZuSk5IREFSMlp5Y0sxP2JvPUVnMGFBQm9BTWdFRVNBSlFHV0FCJnVjPTI1._RS0,90_FMjpeg",
+          "manage_profile_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvRm5leml4ZVZuSk5IREFSMlp5Y0sxP2JvPUVnMGFBQm9BTWdFRVNBSlFHV0FCJnVjPTI1._RS0,640_FMjpeg"
+        },
+        "locality": "Santa Monica",
+        "administrative_district_level_1": "CA",
+        "country": "United States",
+        "snap_user_name": "arbiz-test",
+        "store_id": "fa4fd63a-c987-4b80-9455-deece9a9578b",
+        "share_authorized_data_with_api_partners": false
+      }
+    }
+  ],
+  "paging": {
+    "next_page_id": "azv1_CjVCdXNpbmVzc0FjY291bnRzLzVhNWJlYzMxLTkyZjctNDI5MC1iODllLTY5YWE4ZmUyZGMyOBILCJOApI0GEMi3mAs",
+    "next_link": "https://businessapi.snapchat.com/v1/organizations/40d6719b-da09-410b-9185-0cc9c0dfed1d/public_profiles%3Flimit=1?limit=1&cursor=azv1_CjVCdXNpbmVzc0FjY291bnRzLzVhNWJlYzMxLTkyZjctNDI5MC1iODllLTY5YWE4ZmUyZGMyOBILCJOApI0GEMi3mAs"
+  }
+}
+
+
+Get Profile by Profile ID
+
+This endpoint retrieves all public profiles for a given organization.
+
+HTTP Request
+
+GET https://businessapi.snapchat.com/public/v1/public_profiles/{profile_id}
+
+Example
+
+curl
+    "https://businessapi.snapchat.com/public/v1/public_profiles/76da494b-76bc-4bbb-bb27-c5a66fb0d1ab"
+    -H "Authorization: <ACCESS_TOKEN>"
+
+
+Reponse
+
+{
+  "request_id": "9dcaf5ea-6132-4a72-ad1d-940d19fe4c7a",
+  "request_status": "SUCCESS",
+  "public_profiles": [
+    {
+      "sub_request_status": "SUCCESS",
+      "public_profile": {
+        "id": "76da494b-76bc-4bbb-bb27-c5a66fb0d1ab",
+        "organization_id": "f73196ae-5154-4e5a-8d1d-5bded3992088",
+        "display_name": "Daily Question",
+        "description": "Daily Question",
+        "category": "CATEGORY_V3_PEOPLE",
+        "subcategory": "SUBCATEGORY_V3_SCIENTIST",
+        "logo_urls": {
+          "original_logo_url": "https://cf-st.sc-cdn.net/d/vPpycEULnWA2vZK4mFVcJ?bo=Eg0aABoAMgEESAJQGWAB&uc=25",
+          "discover_feed_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvdlBweWNFVUxuV0EydlpLNG1GVmNKP2JvPUVnMGFBQm9BTWdFRVNBSlFHV0FCJnVjPTI1._RS0,72_FMjpeg",
+          "mega_profile_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvdlBweWNFVUxuV0EydlpLNG1GVmNKP2JvPUVnMGFBQm9BTWdFRVNBSlFHV0FCJnVjPTI1._RS0,90_FMjpeg",
+          "manage_profile_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvdlBweWNFVUxuV0EydlpLNG1GVmNKP2JvPUVnMGFBQm9BTWdFRVNBSlFHV0FCJnVjPTI1._RS0,640_FMjpeg"
+        },
+        "country": "US",
+        "snap_user_name": "dailyquestion1",
+        "share_authorized_data_with_api_partners": false
+      }
+    }
+  ]
+}
+
+
+Get Profile ID by Auth Token
+
+This endpoint retrieves a user’s public profile given a user token.
+
+Note: For this API please generate the access token with the snapchat-profile-api scope
+
+HTTP Request
+
+GET https://businessapi.snapchat.com/v1/public_profiles/my_profile
+
+Example
+
+curl
+    "https://businessapi.snapchat.com/v1/public_profiles/my_profile"
+    -H "Authorization: <ACCESS_TOKEN>"
+
+
+Response
+
+{
+  "request_id": "6d5cbed2-5bc3-4279-b3b5-939c9b2ef084",
+  "request_status": "SUCCESS",
+  "public_profile": {
+    "id": "d6ed1cac-e0cd-4109-bf04-539cb8591838",
+    "organization_id": "af00bec3-7b29-4c6b-a0bb-3908cfb13a81",
+    "display_name": "test user",
+    "category": "CATEGORY_V3_UNKNOWN",
+    "subcategory": "SUBCATEGORY_V3_UNKNOWN",
+    "logo_urls": {
+      "original_logo_url": "https://cf-st.sc-cdn.net/d/YmmIFdcbee3keYymYPlJq?bo=Eg0aABoAMgEESAJQCGAB\u0026uc=8",
+      "discover_feed_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvWW1tSUZkY2JlZTNrZVl5bVlQbEpxP2JvPUVnMGFBQm9BTWdFRVNBSlFDR0FCJnVjPTg._RS0,72_FMpng",
+      "mega_profile_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvWW1tSUZkY2JlZTNrZVl5bVlQbEpxP2JvPUVnMGFBQm9BTWdFRVNBSlFDR0FCJnVjPTg._RS0,90_FMpng",
+      "manage_profile_logo_url": "https://cf-st.sc-cdn.net/aps/bolt/aHR0cHM6Ly9jZi1zdC5zYy1jZG4ubmV0L2QvWW1tSUZkY2JlZTNrZVl5bVlQbEpxP2JvPUVnMGFBQm9BTWdFRVNBSlFDR0FCJnVjPTg._RS0,640_FMpng"
+    },
+    "snap_user_name": "0043d29b",
+    "profile_type": "PUBLIC_PROFILE",
+    "profile_tier": "TIER_STANDARD"
+  }
+}
+"ghcr.io/devcontainers-extra/features/buku:1": {}
+Development Containers are configuration files used by Codespaces and tools implementing the dev container specification.
+
+These files allow you to create a consistent, sharable development environment.
+
+Features
+
+Dev Container Features are self-contained units of installation code and development container configuration. Features are designed to install atop a wide-range of base container images. Be sure to check a Feature's documentation to see which base images are supported.
+
+Usage
+
+To reference a Feature, add the desired Feature(s) to a devcontainer.json. See a Feature's README for available options, or leave the options empty to use the default value.
+
+Example devcontainer.json
+
+{
+    "name": "my-project-devcontainer",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "1.18"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest",
+            "moby": true
+        }
+    }
+}
+Was this page helpful?
+Yes
