@@ -1,0 +1,145 @@
+//@input Component.AnimationPlayer animationPlayer
+//@input Asset.AnimationAsset myAnimation
+
+const myClip = AnimationClip.create("myAnimationClip");
+myClip.animation = script.myAnimation;
+myClip.begin = 0;
+myClip.end = 3.75;
+myClip.weight = 1.0;
+myClip.playbackSpeed = 0.5;
+myClip.playbackMode = PlaybackMode.Loop;
+myClip.reversed = true;
+myClip.disabled = false;
+
+script.animationPlayer.addClip(myClip);
+script.animationPlayer.playClipAt(myClip.name, 0.0);
+interface AnimationClip {
+    animation: AnimationAsset;
+    begin: number;
+    blendMode: AnimationLayerBlendMode;
+    disabled: boolean;
+    duration: number;
+    end: number;
+    name: string;
+    playbackMode: PlaybackMode;
+    playbackSpeed: number;
+    reversed: boolean;
+    scaleMode: AnimationLayerScaleMode;
+    weight: number;
+    clone(clipName: string): AnimationClip;
+    getTypeName(): string;
+    isOfType(type: string): boolean;
+    isSame(other: ScriptObject): boolean;
+}interface AnimationClip {
+   Hierarchy (view full)
+
+ScriptObject
+AnimationClip
+Properties
+
+animation
+begin
+blendMode
+disabled
+duration
+end
+name
+playbackMode
+playbackSpeed
+reversed
+scaleMode
+weight
+Methods
+
+clone
+getTypeName
+isOfType
+isSame
+animation
+animation: AnimationAsset
+Points to the animation asset to be played by the Animation Player.
+
+begin
+begin: number
+Returns begin time of clip.
+
+blendMode
+blendMode: AnimationLayerBlendMode
+The blend mode for this particular clip.
+
+disabled
+disabled: boolean
+Whether the animation clip is disabled.
+
+Readonly
+duration
+duration: number
+Returns the duration of the clip which is calculated based on the begin and end times.
+
+end
+end: number
+Returns end time of clip.
+
+Readonly
+name
+name: string
+Name of the clip.
+
+playbackMode
+playbackMode: PlaybackMode
+Choose whether to play animation clip once, loop the clip, or ping pong it.
+
+playbackSpeed
+playbackSpeed: number
+Scalar value to represent playback speed percentage. 1.0 is 100% playback speed.
+
+reversed
+reversed: boolean
+Specifies if the clip should be played reversed.
+
+scaleMode
+scaleMode: AnimationLayerScaleMode
+How scale is accumulated. Usually does not need to be changed after import.
+
+weight
+weight: number
+Strength of animation clip contribution. Lies between [0.0, 1.0] inclusive. For default blending a 1.0 weight indicates this clip will override all earlier clips, a less than 1.0 weight indicates it will blend onto the calculated pose using a weighted average.
+
+clone
+clone(clipName): AnimationClip
+Clones the existing clip with a new name.
+
+Parameters
+
+clipName: string
+Returns AnimationClip
+
+getTypeName
+getTypeName(): string
+Returns the name of this object's type.
+
+Returns string
+
+Inherited from ScriptObject.getTypeName
+
+isOfType
+isOfType(type): boolean
+Returns true if the object matches or derives from the passed in type.
+
+Parameters
+
+type: string
+Returns boolean
+
+Inherited from ScriptObject.isOfType
+
+isSame
+isSame(other): boolean
+Returns true if this object is the same as other. Useful for checking if two references point to the same thing.
+
+Parameters
+
+other: ScriptObject
+Returns boolean
+
+Inherited from ScriptObject.isSame
